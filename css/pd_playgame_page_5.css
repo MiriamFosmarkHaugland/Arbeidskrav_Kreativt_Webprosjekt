@@ -1,0 +1,190 @@
+/*This pd_playgame_page_5.css file is connected to pd_playgame_page_5.html and pd_start_page_3.*/
+/* This style css is written by Remy */
+
+html, body {
+    overflow: hidden; /* So the images and gifs won't overflow the page*/
+}
+/* Just sets the background on the main container on this page */
+#game_background {
+    background: url(../image/game/background-game.jpg) no-repeat bottom center;
+    background-size: cover;
+}
+/* Sets the location of the "Go Back" button */
+.button_location {
+    position: fixed;
+    top: 3%;
+    left: 2%;
+}
+
+/*  A Wild Mew Has Appeared!
+    Throw Your Pokéball! */
+header {
+    display: flex;
+    flex-direction: column;
+    width: 25vw;
+    background: #ffffff;
+    border-radius: 1.5vw;
+    border: solid 0.3vw #211f1f;
+    margin: 0 auto auto auto;
+    margin-top: 1.5%;
+}
+h1, h2 {
+    text-align: center;
+    font-family: sans-serif;
+    margin: 0.5vw;
+    font-size: 1.5vw;
+    animation: text_animation 2s infinite;
+    justify-content: center;
+}
+/* Animates the text */
+@keyframes text_animation {
+    0%, 100% {
+        color: #ff5e52;
+        transform: scale(1);
+    }
+    50% {
+        color: #06bae1;
+        transform: scale(1.05);
+    }
+}
+
+/*  The Pokemon Trainer
+    Edits size, position and if clickable or not  */
+.pokemon_trainer {
+    position: absolute;
+    left: 53%;
+    top: 95%;
+    width: 20vh;
+    max-width: 250px;
+    min-width: 90px;
+    pointer-events: none; /* Makes it unclickable to start the animation */
+    transform: translate(-50%, -100%);
+    z-index: 4;
+}
+
+/*  The Pokemon "Foongus"
+    Edits size, position and if clickable or not  */
+.pokemon_foongus {
+    position: absolute;
+    top:93%;
+    left: 48%;
+    width: 8vh;
+    max-width: 90px;
+    min-width: 30px;
+    pointer-events: none; /* Makes it unclickable to start the animation */
+    transform: translate(-50%, -100%);
+    z-index: 3;
+}
+
+/*  The Pokemon "Servine"
+    Edits size, position and if clickable or not  */
+.pokemon_servine {
+    position: absolute;
+    top: 95%;
+    left: 56%;
+    width: 16vh;
+    max-width: 200px;
+    min-width: 70px;
+    pointer-events: none; /* Makes it unclickable to start the animation */
+    transform: translate(-50%, -100%);
+    z-index: 5;
+}
+
+/*  The Pokeball you click to throw, turns into the gif
+    Edits size, position and if clickable or not  */
+.pokeball_throw {
+    position: absolute;
+    bottom: 11%;
+    left: 50%;
+    width: 4vh;
+    max-width: 50px;
+    min-width: 20px;
+    transform: translate(-50%, -100%);
+    pointer-events: auto; /* Is clicable by default, change this to none to make unclickable */
+    cursor:grabbing; 
+    z-index: 6;
+}
+
+/*  The Pokemon "Mew" that you catch
+    Edits size, position and if clickable or not  */
+.pokemon_mew {
+    position: absolute;
+    top: 43%;
+    width: 30vh;
+    max-width: 400px;
+    min-width: 200px;
+    left: 50%;
+    transform:translate(-50%, -50%);
+    animation: mew_float 1.5s ease-in-out infinite ;
+    pointer-events: none; /* Makes it unclickable to start the animation */
+    z-index: 0;
+}
+
+/* Makes the checkbox icon invisible */
+.click_catch_mew input[type=checkbox] {
+    display: none;
+}
+
+/* POKÉBALL GIF, THROWN
+Edits the size and position and makes it unclickable  */
+.click_catch_mew input[type=checkbox]:checked~.pokeball_throw{
+    width: 50vh;
+    max-width: 600px;
+    min-width: 200px;
+    left: 50%; 
+    bottom: 5%;
+    transform:translate(-50%, 0%);
+    content: url(../image/game/gif-pokeball-catch.gif);
+    pointer-events: none;
+    animation: ball_down 1s forwards 3s;
+    z-index: 2;
+
+}
+
+/*  Changes the picture of the trainer to have no pokeball in hand
+    Makes the Pokemon trainer unclickable after ball is thrown
+    Only needed if you make the trainer clickable pre-checked or not */
+.click_catch_mew input[type=checkbox]:checked~.pokemon_trainer{
+    content: url(../image/game/trainer.png);
+    pointer-events: none;
+}
+
+/*  Pokémon MEW
+    Inherits everything from .pokemon_mew,
+    changes animation after the checkbox has been clicked */
+.click_catch_mew input[type=checkbox]:checked~.pokemon_mew{ 
+    animation: mew_catch 0.5s forwards 2s;
+}
+
+/* Floating animation of "Mew" */
+@keyframes mew_float {
+    0%, 100% {
+        transform:translate(-50%, -50%) translateY(10px);
+    }
+    50% {
+        transform:translate(-50%, -50%) translateY(-10px);
+    }
+}
+
+/* Makes the gif animation of the Pokéball shrink and move down */
+@keyframes ball_down {
+    0% {
+        transform: translateX(-50%) translateY(0%) scale(1);
+    }
+    100% {
+        transform: translateX(-50%) translateY(34%) scale(0.25);
+    }
+}
+
+/*  Animation to shrink "Mew" and make it invisble
+    to make it look like it's being caught */
+@keyframes mew_catch {
+    0% {
+        transform:translate(-50%, -50%) scale(1);
+    }
+    100% {
+        
+        transform: translate(-50%, -50%) scale(0.1);
+        opacity: 0%
+    }
+}

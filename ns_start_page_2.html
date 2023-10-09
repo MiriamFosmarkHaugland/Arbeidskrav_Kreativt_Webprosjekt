@@ -1,0 +1,83 @@
+<!--This HTML file is written by Miriam-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream nintendo switch game</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!--Container contains all elements on the whole page, this is set up with flexbox in CSS.-->
+    <div class="container">
+
+        <!--Nintendo_switch_container contains the nintendo svg and the other underlaying <div> tags and elements-->
+        <div class="nintendo_switch_container">
+            <h1 class="main_header">Have a look at our dream nintendo game!</h1>
+
+            <!--I made a <div> that can contain an anchor that takes us back to index.html where the nintendo switch is "turned off".
+                In the same <div> an audio file is attached to it so the sound plays when we switch html file.-->
+            <div>
+                <a class="on_button" href="index.html"></a>
+                <audio controls autoplay class="on_and_off_audio">
+                    <source src="audio/turn_on.wav" type="audio/wav">
+                </audio>
+            </div>
+
+            <!--The animated_screen is the colored border whitch contains the games and the different top/bottom icons-->
+            <div class="animated_screen">
+                <div class="topbar">
+                    <div class="user_info">
+                        <img class="user_icon" src="image/ns/pokemon_icon.svg" alt="user icon">
+                        <p id="username">Miralu x Rem</p>
+                    </div>
+
+                    <!--The top right icons are from "Heroicons.com" and i placed them in top right corner.-->
+                    <div class="top_right_icons">
+                        <img class="wifi_icon" src="image/ns/wifi_icon.svg" alt="wifi icon">
+                        <img class="battery_icon" src="image/ns/battery_icon.svg" alt="battery icon">
+                    </div>
+                </div>
+
+                <!--The games_container contains the 3 games where only one has an image. They all have a grow effect when hovered.-->
+                <div class="games_container">
+                    <a class="games"></a>
+                    <a id="main_game" class="games" href="pd_start_page_3.html"><img src="image/ns/pokemon_game.png"
+                            alt="pokemon game"></a>
+                    <a class="games"></a>
+                </div>
+
+                <!---This is a themathic break, that just creates a white line.-->
+                <hr>
+
+                <!--The bottom icons have a set sized circle by using <div> tags and inside them i placed the icons 
+                    from "Heroicons.com" to fit nicely.-->
+                <div class="bottom_icons">
+                    <div class="circle_icons float_effect"><img class="bottom_image_icon" src="image/ns/download_icon.svg"
+                            alt="download icon"></div>
+                    <div class="circle_icons sink_effect"><img class="bottom_image_icon" src="image/ns/chat_icon.svg"
+                            alt="chat icon"></div>
+                    <div class="circle_icons float_effect"><img class="bottom_image_icon" src="image/ns/shop_icon.svg"
+                            alt="shop icon"></div>
+                    <div class="circle_icons sink_effect"><img class="bottom_image_icon" src="image/ns/gallery_icon.svg"
+                            alt="gallery icon"></div>
+                    <div class="circle_icons float_effect"><img class="bottom_image_icon" src="image/ns/sun_icon.svg"
+                            alt="sun icon"></div>
+                </div>
+
+            </div>
+
+            <!--Here is the nintendo switch svg, that i made myself in figma to get an image that would not lose quality when scaled
+                but i followed/copied an already exisiting design from Dribble.com-->
+            <img class="nintendo_switch_image" src="image/ns/Nintendo_Switch.svg" alt="nintendo Switch">
+
+        </div>
+
+    </div>
+</body>
+
+</html>

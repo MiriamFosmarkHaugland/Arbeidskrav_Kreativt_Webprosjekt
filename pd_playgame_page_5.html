@@ -1,0 +1,58 @@
+<!--This HTML file is written by Remy-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Wild Mew has Appeared!</title>
+    <!-- Use both Stylesheets from the start page and this page, so we can easily reuse things like button design
+         Because of Cascading, everything changed in playgame page css will overwrite start page css -->
+    <link rel="stylesheet" href="css/pd_start_page_3.css">
+    <link rel="stylesheet" href="css/pd_playgame_page_5.css">
+</head>
+<body>
+    <!-- Main container, ID changes the background -->
+    <div class="main_container" id="game_background">
+
+        <header><h1>A WILD MEW HAS APPEARED!</h1>
+                <h2>Throw your <img src="image/title/pokeball.png" alt="Pokéball!" width="8%"></h2>
+        </header>
+
+         <!-- The signature "select" sound present in many Pokémon games -->
+         <audio controls autoplay>
+            <source src="audio/pokemon-dream/pokemon-select.mp3" type="audio/mp3">
+        </audio>
+        <!--# Trainer Battle by Braxton Burks 
+            # Song's clipped from https://youtu.be/1oGh_L-5AFs&t=2761 -->
+        <audio controls autoplay>
+            <source src="audio/pokemon-dream/pokemon-battle-orchestra.mp3" type="audio/mp3">
+        </audio>
+        <div class="trainer_container">
+
+        <!--# A checkbox container holding all the pictures. Adapted from the zoom checkbox in about page.
+            # Clicking a picture (unless disabled) will start the animation -->
+        </div>
+        <div class="click_catch_mew">
+            <label>
+                <input type="checkbox">
+                <img class="pokeball_throw" src="image/title/pokeball.png" alt="Catch Mew!">
+                <img class="pokemon_mew"    src="image/game/mew-gif.gif" alt="Mew#151">  
+                <img class="pokemon_trainer" src="image/game/trainer-pokeball-hand.png" alt="Pokemon Trainer">
+                <img class="pokemon_foongus" src="image/game/foongus.png" alt="Foongus#590">
+                <img class="pokemon_servine" src="image/game/servine.png" alt="Servine#496">          
+            </label>
+        </div>
+    </div>
+
+    <!--# Go Back button 
+        # This gets the button classes from "pd_start_page_3.css" and button_location from "pd_playgame_page_5.css" -->
+    <div class="menu_buttons_container button_location">
+        <a href="pd_start_page_3.html" class="menu_button">
+            <p class="menu_button_text">
+             <img class="pokeball_image" src="image/title/pokeball.png" alt="pokeball">
+                <strong>Go Back</strong>
+            </p>
+        </a>
+    </div>
+</body>
+</html>

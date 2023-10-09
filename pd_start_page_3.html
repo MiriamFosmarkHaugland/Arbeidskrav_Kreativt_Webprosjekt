@@ -1,0 +1,55 @@
+<!--This HTML file is written by Remy-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon Dream Game</title>
+    <link rel="stylesheet" href="css/pd_start_page_3.css">
+</head>
+<body>
+    <!-- Main container, ID changes the background of the container -->
+    <div class="main_container" id="title_background">
+
+        <!-- The signature "select" sound present in many Pokémon games -->
+        <audio controls autoplay>
+            <source src="audio/pokemon-dream/pokemon-select.mp3" type="audio/mp3">
+        </audio>
+        <!--# Pallet Town by Braxton Burks 
+            # Song's clipped from https://youtu.be/1oGh_L-5AFs?si=rPOUg1pt1YcsrXBn&t=2584 -->
+        <audio controls autoplay>
+            <source src="audio/pokemon-dream/pokemon-pallet-town-orchestra.mp3" type="audio/mp3">
+        </audio>
+
+        <img class="logo_pokemon_image" src="image/title/pokemon-dream-logo.png" alt="pokemon_logo">
+
+        <!-- The main menu buttons with a picture next to them,
+            the <img> sources gets replaced in CSS on hover -->
+        <div class="menu_buttons_container">
+            <!-- The Dream button -->
+            <a href="pd_about_page_4.html" class="menu_button"> 
+                <p class="menu_button_text">                   
+                    <img class="pokeball_image" src="image/title/pokeball.png" alt="pokeball">
+                    <strong>The Dream</strong>
+                </p>
+            </a>
+            <!-- The Play Game Button -->
+            <a href="pd_playgame_page_5.html" class="menu_button"> 
+                <p class="menu_button_text">
+                    <img class="pokeball_image" src="image/title/pokeball.png" alt="pokeball">
+                    <strong>Play Game</strong>
+                </p>
+            </a>
+            <!-- The Exit Game(Back to the switch) button -->
+            <a href="ns_start_page_2.html" class="menu_button"> 
+                <p class="menu_button_text">
+                    <img class="pokeball_image" src="image/title/pokeball.png" alt="pokeball">
+                    <strong>Exit Dream</strong>
+                </p>
+            </a>
+
+        </div> <!-- End of Menu Buttons Container -->
+    </div>  <!-- End of the Main Container -->
+    
+</body>
+</html>

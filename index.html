@@ -1,0 +1,39 @@
+<!--This HTML file is written by Miriam-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream nintendo switch game</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!--Container contains all elements on the whole page, this is set up with flexbox in CSS.-->
+    <div class="container">
+
+        <!--Nintendo_switch_container contains the nintendo svg and the other underlaying <div> tags and elements-->
+        <div class="nintendo_switch_container">
+            <h1 class="main_header">What do we dream about?</h1>
+            <h6 class="start_header">Click square button to figure out!</h6>
+
+            <!--I made a <div> that can contain an anchor that takes us to main_screen.html where the nintendo switch is "turned on".
+                In the same <div> an audio file is attached to it so the sound plays when we switch html file.-->
+            <div> 
+                <a class="on_button" href="ns_start_page_2.html"></a> 
+                <audio controls autoplay class="on_and_off_audio">
+                    <source src="audio/turn_on.wav" type="audio/wav">
+                </audio>
+            </div>
+
+            <!--Here is the nintendo switch svg, that i made myself in figma to get an image that would not lose quality when scaled
+                but i followed/copied an already exisiting design from Dribble.com-->
+            <img class="nintendo_switch_image" src="image/ns/Nintendo_Switch.svg" alt="Nintendo Switch">
+        </div>
+
+    </div>
+</body>
+
+</html>

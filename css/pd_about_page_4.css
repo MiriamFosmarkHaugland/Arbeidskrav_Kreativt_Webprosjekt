@@ -1,0 +1,138 @@
+/*  This pd_about_page_4.css file is connected to pd_start_page_3.html and pd_about_page_4.
+    This style.css file is written by Remy and Miriam.
+*/
+
+html, body {
+    width: auto;
+    height: auto;
+}
+
+/* Remy
+Removes the scrollbar */
+html::-webkit-scrollbar {
+    display: none;
+}
+
+/*  Miriam
+    Sets a linear-gradient from top to bottom.
+*/
+#dream_background {
+    background: linear-gradient(#ffaf37, #fff490, #fff490, #faf8e9); /*Miriam*/
+}
+
+/*  Miriam
+    Custom font from "fontspace.com"
+*/
+@font-face {
+    font-family: "nintendo_font";
+    src: url(../font/SnesItalic-1G9Be.ttf);
+}
+
+/*Miriam*/
+h1{
+    text-align: center;
+    font-family: "nintendo_font";
+    font-size: 5vh;
+}
+
+/*Miriam
+    Setting the same font and centering all h3, p, and strong elements. 
+*/
+h3, p, strong {
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/*Miriam*/
+#title_spacing {
+    margin-bottom: 50px;
+}
+
+/*Miriam
+    Giving some spacing in form of margin around the all the <p> tags. 
+*/
+p{
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 15%;
+}
+
+/* Miriam
+    Pikachu image has it own container, so it sits at the bottom and followes the sceen when scrolled.
+*/
+.pikachu_container {
+    position: fixed;
+    bottom: 0;
+}
+
+/*Miriam*/
+#pikachu_image {
+    width: 80%;
+}
+
+/*  Miriam
+    Contains all images and text that is under the images.
+*/
+.article_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/*Miriam
+    Contains the seperate individual image with their text.
+*/
+.image_container{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    text-align:center;
+}
+
+/*  Remy
+    This is the box where the article is shown */
+.dream_article {
+    width: 90%;
+    margin-left: 10%;
+    height: auto;
+}
+
+/*  Remy
+    Sets width and border-radius to the pictures */
+.dream_pictures {
+    width: 70%;     /* You need to change the scale size in :checked class after as this changes both */
+    border-radius: 5px;
+}
+
+/*  Remy
+    Hides the checkbox icon of the "input type" in ".click_to_zoom" */
+.click_to_zoom input[type=checkbox] {
+    display:none;
+}
+
+/*  Remy
+    Sets a transition to the img tag and changes the cursor when it's on the picture */
+.click_to_zoom img {
+    transition: transform 0.5s ease-in-out;
+    cursor: zoom-in;
+}
+
+/*  Remy 
+    When you click the picture with a checkbox it puts it in the middle of the screen
+    turns it into a fixed position. It will scale to more closely fit the viewport. */
+.click_to_zoom input[type=checkbox]:checked~img {
+    position:fixed;
+    top: 12vh;
+    right: 15vw;
+    transform:scale(1.25);  /* Change this to change the zoomed size of the pictures */
+    cursor: zoom-out;
+    z-index: 2;
+}
+
+/* Remy
+Sets the location of the button */
+.button_location {
+    position: fixed;
+    top: 3%;
+    left: 2%;
+}

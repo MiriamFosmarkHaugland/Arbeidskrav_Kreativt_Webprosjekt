@@ -1,0 +1,137 @@
+/*  This pd_start_page_3.css file is connected to pd_start_page_3.html.
+    This style.css file is written by Remy. */
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Hides the audio Autoplaying */
+audio {
+    display:none;
+}
+
+/* Removes the link effects from the buttons */
+a:link, a:visited {
+    color:#000;
+    text-decoration: none;
+}
+
+/* Container for all the main menu elements */
+.main_container {
+    width: 100%;
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 0.3vw solid #FFFFFF;
+    box-sizing: border-box;
+
+    animation: border_animation 2s infinite;
+}
+
+/* Background picture. Was AI generated with Midjourney */
+#title_background {
+    background: url(../image/title/background-image.png) no-repeat center center fixed;
+    background-size: cover;
+    justify-content: start;
+    align-items: center;
+    gap: 10%;
+}
+
+/* The Pokémon logo */
+.logo_pokemon_image {
+    width: 20%;
+    height: auto;
+    padding: 2%;
+    filter:drop-shadow(0px 0px 20px #fff);
+    animation: floating 8s infinite; 
+    transition: 2s;
+}
+/* Sakura colored cloud around the logo when mouse hover */
+.logo_pokemon_image:hover {
+    filter:drop-shadow(0 0 100px #e9b1cd)
+}
+/* Floating animation for the Logo */
+@keyframes floating {
+    0%,100% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+}
+/*  Main button container
+    This contains the buttons and lets you move them all together */
+.menu_buttons_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* This lets you edit the text of the menu buttons, styles etc */
+.menu_button_text {
+    display:flex;
+    font-family: sans-serif;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+}
+
+/* The style of the menu buttons, color, size, padding,*/
+.menu_button {
+    display:flex;
+    justify-content: center;
+    width: 150px;
+    height: 20px;
+    padding: 12px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 2px solid #211f1f;
+    filter:drop-shadow(5px 5px 5px #000);
+    transition: transform 0.2s, background-color 0.3s;
+    z-index: 0;
+}
+
+/* Hovering over the menu buttons changes the style */
+.menu_button:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    transform-origin:center center;
+    background-color: #0689e1;
+    z-index: 1;
+}
+
+/*  Replaces the Pokemon image in text     
+    Targets .pokeball_image and changes the content of the class when li:hover */
+.menu_buttons_container .menu_button:hover .pokeball_image {
+    width: 19%;
+    left: 3%;
+    content: url(../image/title/pokeball-open.png); /* changes the content of the <img> tag to this */
+}
+
+/* The image of the pokeball */
+.pokeball_image {
+    width: 20px; 
+    right: 2%;
+    filter: drop-shadow(5px 5px 2px #0000003f);;
+    position:relative;
+    border-radius: 50%;
+    padding-right: 10%; /*Miriam*/
+
+}
+
+/* Animation for edge of screen */
+@keyframes border_animation {
+    0%, 100% {
+        border-color: #ff5e52;
+    }
+    50% {
+        border-color: #06bae1;
+    }
+}
